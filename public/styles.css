@@ -1,0 +1,73 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --muted: #9aa4b2;
+  --text: #e6e6e6;
+  --brand: #6ee7b7;
+  --accent: #60a5fa;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid #232832;
+}
+.nav a { color: var(--text); opacity: 0.9; }
+.nav .brand { color: var(--brand); font-weight: 700; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #232832;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.grid { display: grid; gap: 16px; }
+.grid.cards { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+
+.input, select, button {
+  background: #0b0e14;
+  color: var(--text);
+  border: 1px solid #232832;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+button { cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #0b0e14; font-weight: 700; }
+button.ghost { background: transparent; }
+
+.tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 999px; background: #0b0e14; border: 1px solid #232832; color: var(--muted); }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.spacer { height: 16px; }
+
+.card-img { width: 100%; border-radius: 10px; border: 1px solid #232832; background: #0b0e14; aspect-ratio: 488/680; object-fit: cover; }
+.card { display: flex; flex-direction: column; gap: 8px; }
+.card .name { font-weight: 600; }
+.muted { color: var(--muted); }
+.right { margin-left: auto; }
+
+.mana { display: inline-flex; gap: 6px; }
+.mana .p { width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #0b0e14; font-weight: 800; font-size: 12px; }
+.mana .W { background: #f1e9d2; }
+.mana .U { background: #9fd3fb; }
+.mana .B { background: #b9b1b1; }
+.mana .R { background: #f8b4a0; }
+.mana .G { background: #b8e3c0; }
+
+.list { display: grid; gap: 8px; }
+.list .row { justify-content: space-between; }
+
+.footer { opacity: 0.7; font-size: 12px; margin-top: 32px; text-align: center; }
+

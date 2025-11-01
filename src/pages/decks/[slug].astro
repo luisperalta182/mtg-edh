@@ -1,0 +1,29 @@
+---
+export const prerender = false;
+import DeckInspector from '@components/DeckInspector.vue';
+import ToastHost from '@components/ToastHost.vue';
+const { slug } = Astro.params;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Deck • Commander Builder</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="/">Commander Builder</a>
+      <a href="/decks">Saved Decks</a>
+    </nav>
+    <main class="container">
+      <a href="/decks">← Back to decks</a>
+      <div class="spacer"></div>
+      <!-- Pass slug to client; component will resolve deckId from localStorage -->
+      <DeckInspector deckSlug={String(slug)} client:load />
+      <ToastHost client:load />
+    </main>
+  </body>
+  </html>
+
+
