@@ -1,0 +1,26 @@
+---
+import DeckGrid from '@components/DeckGrid.vue';
+import ToastHost from '@components/ToastHost.vue';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Saved Decks • Commander Builder</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="/">Commander Builder</a>
+      <a href="/decks" aria-current="page">Saved Decks</a>
+    </nav>
+    <main class="container">
+      <h2>Saved Decks</h2>
+      <DeckGrid client:load />
+      <ToastHost client:load />
+      <div class="footer">Local-only storage. Export/import not implemented yet.</div>
+    </main>
+  </body>
+  </html>
+
+

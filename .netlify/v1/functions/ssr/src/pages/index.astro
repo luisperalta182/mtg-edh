@@ -1,0 +1,27 @@
+---
+import CardSearch from '@components/CardSearch.vue';
+import ToastHost from '@components/ToastHost.vue';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Commander Builder</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="/">Commander Builder</a>
+      <a href="/decks">Saved Decks</a>
+    </nav>
+    <main class="container">
+      <h2>Card Finder</h2>
+      <p class="muted">Search Scryfall with optional expansion filter. Select a deck to add cards.</p>
+      <CardSearch client:load />
+      <ToastHost client:load />
+      <div class="footer">Card data & images © Scryfall & respective publishers.</div>
+    </main>
+  </body>
+  </html>
+
+
